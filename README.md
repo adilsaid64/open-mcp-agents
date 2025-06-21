@@ -1,2 +1,3 @@
 # open-mcp-agents
-Exploring agent infrastructure with a focus on MCP-based orchestration servers
+
+Exploring agent infrastructure with a focus on MCP-based orchestration
