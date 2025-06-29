@@ -3,6 +3,6 @@ def hello(text: str) -> str:
 
 
 if __name__ == "__main__":
-    result = hello(text = "test")
+    result = hello(text="test")
 
     print(result)
