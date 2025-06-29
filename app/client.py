@@ -18,7 +18,7 @@ async def main():
                 "transport": "stdio",
             },
             "weather": {
-                "url": "http://localhost:8000/mcp",  # Ensure server is running here
+                "url": "http://localhost:8000/mcp",  ## Ensure server is running here
                 "transport": "streamable_http",
             },
         }

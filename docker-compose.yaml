@@ -1,0 +1,7 @@
+version: '3.8'
+
+services:
+  mcp-weather-server:
+    build: ./mcp-servers/weather-server/ 
+    ports:
+      - "8001:8000"

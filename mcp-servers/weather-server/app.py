@@ -1,4 +1,4 @@
-from mcp.server.fastmcp import FastMCP
+from fastmcp import FastMCP
 
 mcp = FastMCP("Math")
 
@@ -18,4 +18,4 @@ async def get_weather(location: str) -> str:
 
 if __name__ == "__main__":
     # streamable-http transport protocal
-    mcp.run(transport="streamable-http")
+    mcp.run(transport="streamable-http", port=8000)
