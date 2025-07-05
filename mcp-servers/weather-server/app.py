@@ -18,4 +18,4 @@ async def get_weather(location: str) -> str:
 
 if __name__ == "__main__":
     # streamable-http transport protocal
-    mcp.run(transport="streamable-http", port=8000)
+    mcp.run(host="0.0.0.0", transport="streamable-http", port=8000)
