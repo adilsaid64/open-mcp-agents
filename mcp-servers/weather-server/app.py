@@ -1,6 +1,6 @@
 from fastmcp import FastMCP
 
-mcp = FastMCP("Math")
+mcp = FastMCP("Weather")
 
 
 @mcp.tool()
