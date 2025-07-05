@@ -17,8 +17,12 @@ async def main():
             #     "args": ["mathserver.py"],  # absolute path
             #     "transport": "stdio",
             # },
-            "weather": {
-                "url": "http://mcp-weather-server:8000/mcp",
+            # "weather": {
+            #     "url": "http://mcp-weather-server:8000/mcp",
+            #     "transport": "streamable_http",
+            # },
+            "todo": {
+                "url": "http://todo-server:8000/mcp",
                 "transport": "streamable_http",
             },
         }
@@ -37,14 +41,34 @@ async def main():
 
     # print("Math response:", math_response["messages"][-1].content)
 
-    weather_response = await agent.ainvoke(
+    # weather_response = await agent.ainvoke(
+    #     {
+    #         "messages": [
+    #             {"role": "user", "content": "what is the weather in California?"}
+    #         ]
+    #     }
+    # )
+    # print("Weather response:", weather_response["messages"][-1].content)
+
+    todo_response = await agent.ainvoke(
+        {"messages": [{"role": "user", "content": "What are my current todos?"}]}
+    )
+    print("Weather response:", todo_response["messages"][-1].content)
+
+    todo_response = await agent.ainvoke(
         {
             "messages": [
-                {"role": "user", "content": "what is the weather in California?"}
+                {
+                    "role": "user",
+                    "content": (
+                        "Please add a todo for preparing the monthly SRE report, "
+                        "then list all my current todos."
+                    ),
+                }
             ]
         }
     )
-    print("Weather response:", weather_response["messages"][-1].content)
+    print("Multi-action response:", todo_response["messages"][-1].content)
 
 
 asyncio.run(main())

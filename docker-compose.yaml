@@ -1,12 +1,16 @@
 version: '3.8'
 
 services:
-  mcp-weather-server:
-    build: ./mcp-servers/weather-server/ 
+  # mcp-weather-server:
+  #   build: ./mcp-servers/weather-server/ 
+  #   ports:
+  #     - "8000:8000"
+  todo-server:
+    build: ./mcp-servers/todo-server/ 
     ports:
       - "8000:8000"
 
   app:
     build: ./app/
     depends_on:
-      - mcp-weather-server
+      - todo-server

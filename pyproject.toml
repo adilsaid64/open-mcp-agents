@@ -28,4 +28,5 @@ indent-style = "space"
 members = [
     "mcp-servers/weather-server",
     "app",
+    "mcp-servers/todo-server",
 ]
