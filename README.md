@@ -34,7 +34,7 @@ cp app/.template.env app/.env
 # Edit app/.env and set GROQ_API_KEY
 ```
 
-### 3. (Recommended) Run with Docker Compose
+### 3. Run with Docker Compose
 This will build and start the client and todo-server. You can extend the compose file to add more services.
 ```bash
 docker-compose up --build
