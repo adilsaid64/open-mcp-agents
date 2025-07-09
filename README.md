@@ -10,7 +10,7 @@ This project demonstrates a modular agent infrastructure using MCP (Model-Contex
 
 ## Architecture
 
-![Architecture](image.png)
+![Architecture](assets/open-mcp.drawio.png)
 
 ## Prerequisites
 
